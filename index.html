@@ -11,6 +11,7 @@
         integrity='sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=='
         crossorigin='anonymous' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,18 +19,18 @@
     <div id="app" class="container-fluid">
         <div class="row">
             <div class="col-md-3 d-flex justify-content-center  bg-secondary bg-opacity-25">
-                <nav class="nav flex-column" >
-                    <h1 class="fw-bold">Eric Johnson</h1>
+                <nav class="nav flex-column">
+                    <h1 class="fw-bold ">Eric Johnson</h1>
                     <p class="fs-5 fw-bold">Photographer</p>
-                    <ul class="list-unstyled" >
-                        <li >
-                            <a class="nav-link text-dark active text-end" href="" >- MOUNTAIN</a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="nav-link text-dark active text-end" href="">- MOUNTAIN</a>
                         </li>
-                        <li >
+                        <li>
                             <a class="nav-link text-dark text-end" href="">- DESSERT</a>
                         </li>
-                        <li >
-                            <a  class="nav-link text-dark text-end" href="">- EXHIBITIONS</a>
+                        <li>
+                            <a class="nav-link text-dark text-end" href="">- EXHIBITIONS</a>
                         </li>
                     </ul>
                     <a class="nav-link text-dark text-end" href="">ABOUT</a>
@@ -39,7 +40,8 @@
             <div class="col-md-9">
                 <div class="bricklayer" id="my-bricklayer">
                     <div v-for="num in 10" class="box ">
-                        <img class="img-fluid rounded-3" :src="`./images/0${num}.jpeg`" alt="">
+                        <img :id="num" class="my-element  img-fluid  opacity-0" :src="`./images/0${num}.jpeg`"
+                            alt="" >
                     </div>
                 </div>
             </div>
@@ -56,11 +58,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./data.js"></script>
-    <script>
-
-        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
-
-    </script>
+    <script src="./bricklayer.js"></script>
+    <script src="./animate.js"></script>
 </body>
 
 </html>
