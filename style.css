@@ -1,0 +1,25 @@
+.nav {
+    margin-top: 20%;
+}
+
+.box {
+    margin-bottom: 10px;
+}
+.bricklayer {
+    margin-top: 4%;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .bricklayer-column-sizer {
+        /* divide by 3. */
+        width: 33.33333%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bricklayer-column-sizer {
+        /* divide by 2. */
+        width: 50%;
+    }
+}
