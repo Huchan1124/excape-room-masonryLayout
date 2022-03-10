@@ -10,11 +10,11 @@ newArray.sort(function(a, b) {
 
 
 let i = 0;
-setInterval(function () {
+const setInte = setInterval(function () {
 
-    if(i === 10){
-        clearInterval(interval);
-        }
+    if(i === 9){
+        clearInterval(setInte);
+    }
 
     newArray[i].classList.remove('opacity-0', 'opacity-1');
     newArray[i].classList.add('animate__animated', 'animate__bounceIn');
@@ -22,3 +22,8 @@ setInterval(function () {
     i += 1;
 
 }, 1200)
+
+
+
+
+    
